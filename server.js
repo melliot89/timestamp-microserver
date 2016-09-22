@@ -14,6 +14,6 @@ app.get('/:timestamp', function(req, res) {
   res.json({ "unix": timestamp.unix(), "natural" : timestamp.format("dddd, MMMM Do YYYY, h:mm:ss a") });
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port 3000!');
 });
